@@ -53,15 +53,17 @@ const gradesColors = {
   body = document.getElementsByTagName("body")[0];
 
 function createDivs() {
-  for (let index = 0; index < gradesColorsArray.length; index++) {
+  for (let key in gradesColors) {
     // create the div & input
     let div = document.createElement("div");
     let inputField = document.createElement("input");
+    let gradeName = document.createElement("span");
     // Style the div
-    div.style.backgroundColor = gradesColorsArray[index];
+    div.style.backgroundColor = gradesColors[key];
     // add eventlisteners
     inputField.addEventListener("input", setBackgroundColor);
     // place the div & input in the body
+    div.appendChild(gradeName).textContent = key;
     body.appendChild(div).appendChild(inputField);
   }
 }
