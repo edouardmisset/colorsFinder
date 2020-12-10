@@ -2,26 +2,27 @@ body {
   margin: auto;
   padding: 0;
   height: 100vh;
-  max-width: 600px;
+  max-width: 400px;
   display: grid;
-  grid-template-rows: repeat(24, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: 1fr 1fr;
   scroll-snap-type: y mandatory;
+  background-color: rgba(231, 231, 231, 0.918);
 }
 
 div {
-  height: 10vh;
+  min-height: 5vh;
   scroll-snap-align: start;
   display: grid;
   align-items: center;
-  text-align: center;
   background-color: #3b3b3b;
-  border: thin solid rgba(29, 29, 29, 0.9);
+  border: thin solid rgba(71, 71, 71, 0.287);
 }
 
 input {
-  border: thin solid rgba(29, 29, 29, 0.9);
+  border: thin solid rgba(71, 71, 71, 0.287);
   display: block;
-  width: min-content;
+  max-width: char(10);
   margin: auto;
   background-color: rgba(233, 233, 233, 0.1);
 }
